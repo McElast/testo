@@ -4,6 +4,7 @@ from django.core.exceptions import ValidationError
 
 
 def validate_year(val):
+    """Валидатор года."""
     current_year = datetime.date.today().year
     if val > current_year or val < 1900:
         raise ValidationError(
